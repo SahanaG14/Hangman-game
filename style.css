@@ -1,0 +1,179 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #fff;
+  color: #000;
+  transition: 0.3s;
+}
+
+.dark {
+  background-color: #111;
+  color: #fff;
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.title {
+  font-family: cursive;
+  font-size: 3em;
+  margin-top: 30px;
+}
+
+.home-img {
+  width: 200px;
+  margin: 20px auto;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.screen {
+  display: none;
+}
+
+.screen:not(.hidden) {
+  display: block;
+}
+
+.hangman-img {
+  width: 180px;
+  margin: 20px auto;
+}
+
+#clue-container {
+  margin: 10px auto;
+  font-weight: bold;
+}
+
+#word-display {
+  font-size: 28px;
+  letter-spacing: 8px;
+  margin: 20px;
+}
+
+/* ------------------ QWERTY Layout Keyboard ------------------ */
+#keyboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.keyboard-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.key {
+  width: 40px;
+  height: 40px;
+  margin: 4px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid #999;
+  background-color: #f0f0f0;
+  transition: 0.2s;
+}
+
+.key:hover {
+  background-color: #ddd;
+}
+
+#result-message {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#play-again {
+  margin-top: 15px;
+}
+
+/* Responsive fix for mobile */
+@media (max-width: 500px) {
+  .key {
+    width: 12vw;
+    height: 12vw;
+    font-size: 5vw;
+  }
+
+  .home-img {
+    width: 150px;
+  }
+
+  .title {
+    font-size: 2.2em;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+
+  #word-display {
+    font-size: 22px;
+    letter-spacing: 6px;
+  }
+
+  /* Keyboard layout rows */
+  .keyboard-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 6px;
+  }
+
+  /* Base key style */
+  .key {
+    width: 40px;
+    height: 40px;
+    margin: 4px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background: #f0f0f0;
+  }
+
+  /* Responsive fix for mobile */
+  @media (max-width: 600px) {
+    .key {
+      width: 9vw;
+      height: 9vw;
+      font-size: 4.5vw;
+      margin: 2px;
+    }
+
+    .keyboard-row:nth-child(2) {
+      margin-left: 4vw;
+    }
+
+    .keyboard-row:nth-child(3) {
+      margin-left: 8vw;
+    }
+
+    #keyboard {
+      padding: 0 10px;
+    }
+  }
+}

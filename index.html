@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hangman</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="theme-toggle" onclick="toggleTheme()">🌓</div>
+
+  <div id="home-screen" class="screen">
+    <h1 class="title">HANGMAN</h1>
+    <img src="hangman.png" class="home-img" alt="Hangman" />
+    <div class="button-group">
+      <button onclick="startComputerGame()">Play with Computer</button>
+      <button onclick="showFriendInput()">Play with Friends</button>
+    </div>
+  </div>
+
+  <div id="friend-input-screen" class="screen hidden">
+    <h2>Enter a word for your friend to guess:</h2>
+    <input type="text" id="custom-word-input" /> <br><br>
+    <div class="button-group">
+      <button onclick="startFriendGame()">Start Game</button>
+      <button onclick="goHome()">Back to Home</button>
+    </div>
+  </div>
+
+  <div id="game-screen" class="screen hidden">
+    <img id="hangman-img" src="0.png" class="hangman-img" />
+    <div id="clue-container"></div>
+    <div id="word-display"></div>
+    <div id="keyboard"></div>
+    <div id="result-message"></div>
+    <button id="play-again" class="hidden" onclick="goHome()">Play Again</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
