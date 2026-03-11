@@ -263,7 +263,7 @@ function startGame(selectedWord, selectedClue) {
 }
 
 function updateImage() {
-  document.getElementById("hangman-img").src = `${wrongGuesses}.png`;
+  document.getElementById("hangman-img").src = `${wrongGuesses}.png.jpeg;
 }
 
 function updateWordDisplay() {
@@ -325,3 +325,4 @@ function endGame(won) {
   document.getElementById("play-again").classList.remove("hidden");
   document.querySelectorAll(".key").forEach((key) => (key.disabled = true));
 }
+
